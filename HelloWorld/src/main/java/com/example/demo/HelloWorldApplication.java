@@ -11,16 +11,16 @@ public class HelloWorldApplication {
 			
 		ApplicationContext ac = SpringApplication.run(AppConfig.class, args);
 		
-		System.out.println(ac.getBean("getTime"));
-		System.out.println(ac.getBean("getTime"));
-		System.out.println(ac.getBean("getTime"));
-		System.out.println(ac.getBean("getTime"));
-		System.out.println(ac.getBean("getTime"));
-		System.out.println(ac.getBean("getTime"));
-		System.out.println(ac.getBean("getTime"));
-		System.out.println(ac.getBean("getTime"));
-		System.out.println(ac.getBean("getTime"));
-		System.out.println(ac.getBean("getTime"));
+
+		
+		for(int i=0; i<20; i++) {
+			System.out.println(i);
+			System.out.println(ac.getBean("getTime"));
+
+		}
+		
+		
+		
 
 		System.out.println(ac.getBean("helloWorld"));
 		
