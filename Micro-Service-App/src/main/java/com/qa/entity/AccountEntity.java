@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="ACCOUNT")
-public class Account {
+public class AccountEntity {
 		
 		@Id
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,8 +17,9 @@ public class Account {
 		private String firstName;
 		private String lastName;
 		private String accountNumber;
+		private String prize;
 		
-		public Account(Long id, String firstName, String lastName, String accountNumber) {
+		public AccountEntity(Long id, String firstName, String lastName, String accountNumber, String prize) {
 			
 			this.id = id;
 			this.firstName = firstName;
@@ -26,7 +27,7 @@ public class Account {
 			this.accountNumber = accountNumber;
 		}
 		
-		public Account() {}
+		public AccountEntity() {}
 
 		public Long getId() {
 			return id;
@@ -44,6 +45,10 @@ public class Account {
 			return accountNumber;
 		}
 
+		public String getPrize() {
+			return prize;
+		}
+
 		public void setId(Long id) {
 			this.id = id;
 		}
@@ -59,6 +64,12 @@ public class Account {
 		public void setAccountNumber(String accountNumber) {
 			this.accountNumber = accountNumber;
 		}
+
+		public void setPrize(String prize) {
+			this.prize = prize;
+		}
+		
+		
 	
 	
 	

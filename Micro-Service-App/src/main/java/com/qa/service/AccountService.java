@@ -1,15 +1,12 @@
 package com.qa.service;
 
-import java.util.Collection;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 
-import com.qa.entity.Account;
+
+import com.qa.entity.AccountEntity;
 import com.qa.repository.AccountRepo;
 
 @Service
@@ -19,21 +16,21 @@ public class AccountService {
 	private AccountRepo Repo;
 
 	// Get All
-	public List<Account> getAllAccounts() {
-		List<Account> account = Repo.findAll();
+	public List<AccountEntity> getAllAccounts() {
+		List<AccountEntity> account = Repo.findAll();
 		return account;
 	}
 
 	// Add Account
 
-	public Account addAccount(Account account) {
+	public AccountEntity addAccount(AccountEntity account) {
 		 return Repo.save(account);		 
 	}
 
 	// Update Account
 
-	public Account updateAccount(Account account) {
-		Account accountUpdate = Repo.findById(account.getId()).get();
+	public AccountEntity updateAccount(AccountEntity account) {
+		AccountEntity accountUpdate = Repo.findById(account.getId()).get();
 		accountUpdate.setFirstName(account.getFirstName());
 		accountUpdate.setLastName(account.getLastName());
 		accountUpdate.setAccountNumber(account.getAccountNumber());
