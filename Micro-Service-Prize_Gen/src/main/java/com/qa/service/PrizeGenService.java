@@ -55,7 +55,7 @@ public class PrizeGenService {
 
 		} 
 		
-		return prize;
+		return "Invalid Account Number, Please Try Again";
 
 		
 	}
