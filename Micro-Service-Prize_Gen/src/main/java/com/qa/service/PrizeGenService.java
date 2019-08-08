@@ -1,6 +1,5 @@
 package com.qa.service;
 
-import java.util.Random;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,15 +12,15 @@ public class PrizeGenService {
 		firstChar = accountNumber.substring(0, 1);
 		String prize = "";
 
+		System.out.println(accountNumber);
 		System.out.println(accountNumberLength);
 		System.out.println(firstChar);
 		System.out.println(prize);
 
-		
 		if (firstChar.equals("A")) {
-			
+
 			prize = "Sorry, You Have Not Won A Prize";
-		
+
 		} else if (firstChar.equals("B")) {
 
 			switch (accountNumberLength) {
@@ -53,23 +52,20 @@ public class PrizeGenService {
 
 			}
 
-		} 
-		
-		return "Invalid Account Number, Please Try Again";
+		}
 
-		
+		return prize;
+
 	}
 
 }
 
 /*
  * 
- * 6 digits and starts with an b you get $50 
- * 8 digits and starts with an b you get $500
- * 10 digits and starts with an b you get $5000
+ * 6 digits and starts with an b you get $50 8 digits and starts with an b you
+ * get $500 10 digits and starts with an b you get $5000
  * 
- * 6 digits and starts with an c you get $100 
- * 8 digits and starts with an c you get $750 
- * 10 digits and starts with an c you get $10000
+ * 6 digits and starts with an c you get $100 8 digits and starts with an c you
+ * get $750 10 digits and starts with an c you get $10000
  * 
  */

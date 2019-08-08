@@ -19,8 +19,6 @@ import org.springframework.web.client.RestTemplate;
 @EnableJms
 public class ActiveMqProducerApplication {
 
-	// public final static String PRODUCT_MESSAGE_QUEUE = "product-message-queue";
-
 	public static void main(String[] args) {
 		SpringApplication.run(ActiveMqProducerApplication.class, args);
 	}

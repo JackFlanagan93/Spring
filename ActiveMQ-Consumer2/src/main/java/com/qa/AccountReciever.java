@@ -26,20 +26,7 @@ public class AccountReciever {
 	public void receiveMessage(String account)
 			throws JMSException, JsonParseException, JsonMappingException, IOException {
 
-		// ObjectMapper Jackson
-		// JSON Util
-
-//		System.out.println("Account ID: " + account.getId() + " Account Number: " + account.getAccountNumber()
-//				+ " Account First Name: " + account.getFirstName() + " Account Last Name: " + account.getLastName()
-//				+ " Account Prize: " + account.getPrize());
-
 		AccountEntity a = objectMapper.readValue(account, AccountEntity.class);
 		repo.insert(a);
 	}
-
-//	@JmsListener(destination = "myFirstQueue")
-//	public void recieveMessageString(String account) throws JMSException {
-//		System.out.println(account);
-//	}
-
 }
