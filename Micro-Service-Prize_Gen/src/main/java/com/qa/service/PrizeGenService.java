@@ -12,11 +12,6 @@ public class PrizeGenService {
 		firstChar = accountNumber.substring(0, 1);
 		String prize = "";
 
-		System.out.println(accountNumber);
-		System.out.println(accountNumberLength);
-		System.out.println(firstChar);
-		System.out.println(prize);
-
 		if (firstChar.equals("A")) {
 
 			prize = "Sorry, You Have Not Won A Prize";
